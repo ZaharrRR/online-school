@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   pages: true,
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss"],
+
   app: {
     head: {
       title: "MegaSchool",
@@ -17,4 +18,5 @@ export default defineNuxtConfig({
       ],
     },
   },
+  css: ["@/assets/css/main.css"],
 });

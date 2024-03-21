@@ -6,7 +6,7 @@
 
 <script lang="ts" setup></script>
 
-<style scoped>
+<style>
 .btn-default {
   @apply bg-[#0C73FE] text-sm font-bold text-white px-[36px] py-3;
 }
