@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#212121] text-white">
+  <footer class="bg-[var(--footer-black)] text-white">
     <div class="container mx-auto px-[45px] py-[22px] flex justify-between">
       <div class="flex flex-col justify-between">
         <NuxtLink to="/">

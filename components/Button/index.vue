@@ -7,7 +7,24 @@
 <script lang="ts" setup></script>
 
 <style>
-.btn-default {
-  @apply bg-[#0C73FE] text-sm font-bold text-white px-[36px] py-3;
+.btn-blue {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+
+  @apply bg-[var(--basic-blue)] text-white px-[36px] py-4;
+}
+
+.btn-blue:hover {
+  @apply shadow-lg shadow-blue-500/50;
+}
+
+.btn-press {
+  transition: border 0.5s ease;
+
+  @apply border-b-[6px] border-[var(--dark-blue)];
+}
+
+.btn-press:active {
+  border-bottom: 0;
 }
 </style>
