@@ -29,13 +29,24 @@
             </button>
           </div>
         </div>
-        <div></div>
+
+        <div class="w-full grid grid-cols-3 gap-[36px] my-[36px]">
+          <div
+            v-if="courses"
+            :courses="courses"
+            v-for="(card, index) in courses"
+            :key="index"
+          >
+            <CourseCard :course="card" />
+          </div>
+        </div>
       </div>
     </div>
   </BlockLayout>
 </template>
 
 <script setup lang="ts">
+import type { Course } from "~/domain/Course";
 import BlockLayout from "~/layouts/BlockLayout.vue";
 
 const selected = ref("all");
@@ -51,6 +62,65 @@ const selectorStyle = [
   " w-full py-[16px] text-center text-[24px] text-[#919191] border-b-[3px] border-[var(--dark-gray)] h hover:text-black",
   " w-full py-[16px] text-center text-[24px] font-semibold border-b-[3px] border-[var(--basic-blue)]",
 ];
+
+const courses: Course[] = [
+  {
+    id: "0",
+    name: "Основы языка python",
+    description:
+      "Научим ребёнка программировать на одном из самых популярных и востребованных языков в мире",
+    icon: "python-logo",
+    years: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+    colors: ["#1595FF", "#2ECDFF"],
+  },
+  {
+    id: "1",
+    name: "Создание игр в Scratch",
+    description:
+      "Ребёнок изучит основы программирования через создание собственных игр и анимации",
+    icon: "scratch-logo",
+    years: [5, 6, 7, 8, 9, 10, 11, 12, 13],
+    colors: ["#FF8462", "#FFC565"],
+  },
+  {
+    id: "2",
+    name: "Компьютерная грамотность",
+    description:
+      "Научим ребёнка с пользой использовать компьютер и популярные прикладные программы.",
+    icon: "word-logo",
+    years: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+    colors: ["#3FA2EC", "#1A5EC0"],
+  },
+  {
+    id: "3",
+    name: "Python в  Minecraft",
+    description:
+      "Ребёнок нескучным способом изучит основы программирования на языке Python",
+    icon: "minecraft-logo",
+    years: [8, 9, 10, 11, 12, 13, 14],
+    colors: ["#97CC67", "#65B62C"],
+  },
+  {
+    id: "4",
+    name: "Roblox Studio",
+    description:
+      "Научим ребёнка создавать компьютерные игры в Roblox и программировать на языке Lua.",
+    icon: "roblox-logo",
+    years: [8, 9, 10, 11, 12, 13, 14],
+    colors: ["#FF6187", "#FFA16C"],
+  },
+  {
+    id: "5",
+    name: "Создание сайтов",
+    description: "Научим ребёнка создавать собственные сайты в интернете",
+    icon: "chrome-logo",
+    years: [8, 9, 10, 11, 12, 13, 14],
+    colors: ["#FFC016", "#00DA5A"],
+  },
+];
 </script>
 
-<style scoped></style>
+<style scoped>
+.grid-container {
+}
+</style>
