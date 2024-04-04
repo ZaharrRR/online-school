@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   pages: true,
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
 
   app: {
     head: {

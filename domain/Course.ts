@@ -3,7 +3,7 @@ interface Course {
   name: string;
   description: string;
   icon: string;
-  years?: number[];
+  years: number[];
   colors: string[];
 }
 
