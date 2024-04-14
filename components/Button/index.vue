@@ -1,5 +1,5 @@
 <template>
-  <button class="flex rounded-full px-5 py-1 border">
+  <button class="flex justify-content: center rounded-full px-5 py-1 border">
     <slot />
   </button>
 </template>
@@ -11,7 +11,7 @@
   font-family: "Inter", sans-serif;
   font-weight: 700;
 
-  @apply bg-[var(--basic-blue)] text-white px-[36px] py-4;
+  @apply bg-[var(--basic-blue)] text-white;
 }
 
 .btn-blue:hover {

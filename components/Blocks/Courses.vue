@@ -39,7 +39,7 @@
             v-for="(card, index) in courses"
             :key="index"
           >
-            <CourseCard :course="card" />
+            <CardsCourse :course="card" />
           </div>
         </div>
       </div>

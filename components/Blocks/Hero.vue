@@ -9,7 +9,7 @@
           Индивидуальные занятия по программированию и дизайну от 5 до 18 лет
         </p>
         <div class="h-[100px] center">
-          <Button class="btn-blue btn-press text-[24px]"
+          <Button class="btn-blue btn-press text-[24px] px-[36px] py-4"
             >Попробуйте бесплатно</Button
           >
         </div>
