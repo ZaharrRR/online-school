@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --text-black: #2d2d2d;
+  --basic-blue: #0c73fe;
+  --basic-gray: #e3e3e3;
+  --dark-blue: #1b64c6;
+  --footer-black: #212121;
+  --dark-gray: #d8d8d8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-black);
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: var(--text-black);
+}
+
+button {
+  outline: none;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-black);
+  cursor: pointer;
+}
+
+.btn {
+  border: 2px solid;
+  border-radius: 50px;
+  padding: 8px 16px;
+  transition: transform 0.15s;
+  transform-style: preserve-3d;
+}
+
+.btn:active {
+  transform: translate(0em, 0.25em);
+}
+
+.btn-blue {
+  background-color: var(--basic-blue);
+  border: 2px solid var(--dark-blue);
+  border-bottom: 4px solid var(--dark-blue);
+  border-top: none;
+  color: white;
+  font-weight: bolder;
+}
+
+.btn-blue:hover {
+  box-shadow: var(--basic-blue) 0px 5px 15px;
+}
+
+input {
+  outline: none;
+  border: none;
+  color: var(--text-black);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.input {
+  background-color: #f1f3ff;
+  border-radius: 50px;
+  padding: 8px 16px;
+}
+
+.input::placeholder {
+  color: #b3b3b3;
+}
