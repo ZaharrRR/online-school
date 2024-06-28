@@ -1,12 +1,12 @@
 <template>
-  <div class="contact">
+  <section class="contact">
     <div class="contact-text">
       <h2>Поможем с выбором!</h2>
       <p>Оставьте ваш номер. Мы позвоним, чтобы ответить на ваши вопросы!</p>
     </div>
 
     <ContactForm class="contact-form" />
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -40,5 +40,6 @@ import ContactForm from '@/components/Forms/ContactForm.vue'
 
 .contact-form {
   width: 40%;
+  max-width: 400px;
 }
 </style>

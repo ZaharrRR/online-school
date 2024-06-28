@@ -27,7 +27,7 @@ form input {
 
 form button {
   align-self: center;
-  width: 40%;
+  width: 50%;
   margin-top: 12px;
   padding: 16px 32px;
 }

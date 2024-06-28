@@ -1,5 +1,5 @@
 <template>
-  <div class="block">
+  <section class="block">
     <h2>
       <slot name="title" />
     </h2>
@@ -9,7 +9,7 @@
     </p>
 
     <slot />
-  </div>
+  </section>
 </template>
 
 <style scoped>

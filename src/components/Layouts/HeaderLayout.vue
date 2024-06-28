@@ -25,7 +25,6 @@ header {
   justify-content: space-between;
 
   padding: 40px 50px;
-  margin-bottom: 100px;
 }
 
 .logo {

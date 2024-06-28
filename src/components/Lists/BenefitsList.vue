@@ -22,5 +22,6 @@ defineProps({
   display: flex;
   flex-direction: column;
   gap: 64px;
+  margin-bottom: 100px;
 }
 </style>

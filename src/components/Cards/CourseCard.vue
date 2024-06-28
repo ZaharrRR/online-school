@@ -13,12 +13,14 @@
         {{ Math.min(...card.ages) + '-' + Math.max(...card.ages) + ' лет' }}
       </span>
 
-      <button
-        class="btn"
-        :style="`border: 2px solid ${card.colors[0]}; background-color: ${card.colors[0]}`"
-      >
-        Подробнее
-      </button>
+      <RouterLink :to="`/course/${card.id}`">
+        <button
+          class="btn"
+          :style="`border: 2px solid ${card.colors[0]}; background-color: ${card.colors[0]}`"
+        >
+          Подробнее
+        </button>
+      </RouterLink>
     </div>
 
     <img class="card-img" :src="card.icon" alt="card-icon" />

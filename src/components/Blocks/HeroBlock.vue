@@ -21,6 +21,7 @@ import BlockLayout from '@/components/Layouts/BlockLayout.vue'
   align-items: center;
   justify-content: space-between;
   gap: 36px;
+  margin-top: 100px;
 }
 
 .hero-info {
