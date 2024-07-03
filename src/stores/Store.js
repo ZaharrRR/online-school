@@ -27,7 +27,47 @@ export const useStore = defineStore('store', {
             'Разработка консольных приложений, чат-ботов',
             'Самостоятельное создание и продвижение проекта'
           ]
-        }
+        },
+        projects: [
+          {
+            title: 'Вова Путин Python',
+            img: '/students/president.png'
+          },
+          {
+            title: 'Альтушка для скуфа rampy, pygame',
+            img: '/students/altushka.png'
+          }
+        ],
+        program: [
+          {
+            section: 'М1. Добро пожаловать. Основы программирования',
+            subsections: ['первый', 'второй']
+          },
+          {
+            section: 'М2. Логика и циклы',
+            subsections: ['первый', 'второй']
+          },
+          {
+            section: 'М3. Углубленная работа с циклами',
+            subsections: ['первый', 'второй']
+          },
+          {
+            section: 'М4. Списки с словари. Работа с таблицами',
+            subsections: ['первый', 'второй']
+          },
+          {
+            section: 'М5. Pygame. Знакомство',
+            subsections: ['первый', 'второй']
+          },
+          {
+            section: 'М6. Pygame. Выбор направления, создание игры',
+            subsections: ['первый', 'второй']
+          },
+          {
+            section: 'М7. Создание финального проекта',
+            subsections: ['первый', 'второй']
+          }
+        ]
       },
       {
         id: 1,

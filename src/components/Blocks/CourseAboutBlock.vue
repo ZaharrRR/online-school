@@ -49,6 +49,7 @@ defineProps({
   color: white;
   border-radius: 26px;
   padding: 28px;
+  margin-right: 50px;
 
   font-size: 14px;
   font-weight: 500;

@@ -19,6 +19,7 @@
 
 .block h2 {
   font-size: 36px;
+  margin-bottom: 48px;
 }
 
 .block p {
