@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="logo-info">
-      <a href="/">LOGO</a>
+      <a href="/">ПРОГА</a>
       <p>® 2024 "Название" - школа программирования и дизайна</p>
     </div>
 

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a class="logo" href="/">LOGO</a>
+    <a class="logo" href="/">ПРОГА</a>
 
     <nav>
       <a href="">О нас</a>

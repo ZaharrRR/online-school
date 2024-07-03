@@ -7,8 +7,8 @@
           <h1>{{ course.name }}</h1>
         </div>
 
-        <p>
-          {{ course.description }}
+        <p v-for="(p, index) in course.extradescription" :key="index">
+          {{ p }}
         </p>
 
         <div class="left-tags">
@@ -87,14 +87,14 @@ defineProps({
 
 .left-tags {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
 .tag {
   background-color: var(--basic-gray);
   border-radius: 50px;
-  padding: 8px 16px;
+  padding: 6px 12px;
 }
 
 .right {
@@ -114,10 +114,11 @@ defineProps({
 }
 
 .grid-item strong {
-  font-size: 22px;
+  font-size: 20px;
 }
 .grid-item p {
   font-size: 18px;
+  margin-bottom: 16px;
 }
 
 .right button {
