@@ -8,7 +8,7 @@
     <div class="contacts">
       <div class="contacts-head">
         <p>+7 (951) 175-1764</p>
-        <a href="/">info@pornhub.com</a>
+        <a href="/">info@proga.com</a>
       </div>
 
       <div class="contacts-social">

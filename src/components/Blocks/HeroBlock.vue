@@ -4,15 +4,29 @@
       <h1>Детская школа программирования и дизайна</h1>
       <p>Индивидуальные занятия по программированию и дизайну от 5 до 18 лет</p>
 
-      <button class="btn btn-blue">Попробуйте бесплатно</button>
+      <button class="btn btn-blue" @click="openContactModal">Попробуйте бесплатно</button>
     </div>
 
     <img class="hero-img" src="@/assets/img/hero-boy.png" alt="Boy" />
+
+    <ContactModal :is-open="isOpenContactModal" @close-modal="closeContactModal" />
   </BlockLayout>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import BlockLayout from '@/components/Layouts/BlockLayout.vue'
+import ContactModal from '@/components/Modals/ContactModal.vue'
+
+const isOpenContactModal = ref(false)
+
+const openContactModal = () => {
+  isOpenContactModal.value = true
+}
+
+const closeContactModal = () => {
+  isOpenContactModal.value = false
+}
 </script>
 
 <style scoped>

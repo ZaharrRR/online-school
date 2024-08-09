@@ -7,8 +7,8 @@
           <h1>{{ course.name }}</h1>
         </div>
 
-        <p v-for="(p, index) in course.extradescription" :key="index">
-          {{ p }}
+        <p>
+          {{ course.description }}
         </p>
 
         <div class="left-tags">
