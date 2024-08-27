@@ -1,47 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-:root {
-  --text-black: #2d2d2d;
-  --basic-blue: #0c73fe;
-  --basic-gray: #e3e3e3;
-  --dark-blue: #1b64c6;
-  --footer-black: #212121;
-  --dark-gray: #d8d8d8;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-black);
-  overflow-x: hidden;
-}
-
-a {
-  outline: none;
-  text-decoration: none;
-  color: var(--text-black);
-}
-
-h1,
-h2,
-h3 {
-  margin-bottom: 24px;
-}
-
-button {
-  outline: none;
-  background: transparent;
-  border: none;
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  color: var(--text-black);
-  cursor: pointer;
-}
+@import './base.css';
 
 .btn {
   border: 2px solid;
@@ -68,20 +25,12 @@ button {
   box-shadow: var(--basic-blue) 0px 5px 15px;
 }
 
-input {
-  outline: none;
-  border: none;
-  color: var(--text-black);
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-}
-
 .input {
-  background-color: #f1f3ff;
+  background-color: var(--input-bg);
   border-radius: 50px;
   padding: 8px 16px;
 }
 
 .input::placeholder {
-  color: #b3b3b3;
+  color: var(placeholder-gray);
 }
