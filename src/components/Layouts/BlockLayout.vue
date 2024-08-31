@@ -15,6 +15,22 @@
 <style scoped>
 .block {
   padding: 0 50px;
+  margin: 0 auto;
+
+  width: var(--screen-lg);
+}
+
+@media (max-width: 1366px) {
+  .block {
+    width: var(--screen-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .block {
+    padding: 0 20px;
+    width: var(--screen-sm);
+  }
 }
 
 .block h2 {

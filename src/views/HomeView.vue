@@ -3,8 +3,8 @@
     <Hero />
     <Courses />
     <Prices />
-    <Contacts />
     <Benefits />
+    <Contacts />
   </main>
 </template>
 

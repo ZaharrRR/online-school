@@ -5,32 +5,7 @@ import { courses } from '@/school.json'
 export const useStore = defineStore('store', {
   state: () => ({
     courses: courses,
-    prices: [
-      {
-        id: 0,
-        lessons: 4,
-        pricePer: 760,
-        progress: 12.5
-      },
-      {
-        id: 1,
-        lessons: 8,
-        pricePer: 720,
-        progress: 25
-      },
-      {
-        id: 2,
-        lessons: 16,
-        pricePer: 680,
-        progress: 50
-      },
-      {
-        id: 3,
-        lessons: 32,
-        pricePer: 640,
-        progress: 100
-      }
-    ],
+
     benefits: [
       {
         id: 0,

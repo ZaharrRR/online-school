@@ -9,8 +9,13 @@
   --dark-gray: #d8d8d8;
   --placeholder-gray: #b3b3b3;
   --input-bg: #f1f3ff;
+
   --font-family: 'Inter', sans-serif;
   --font-size: 16px;
+
+  --screen-sm: 360px;
+  --screen-md: 768px;
+  --screen-lg: 1366px;
 }
 
 *,
