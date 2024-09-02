@@ -1,63 +1,38 @@
 <template>
-  <BlockLayout>
+  <BlockLayout id="prices-block">
     <template #title>Стоимость занятий</template>
 
     <div class="prices">
-      <div class="price-block" style="background-color: var(--basic-blue); color: white">
-        <div class="block-tags">
-          <div
-            v-for="tag in allLessons.tags"
-            :key="tag.value"
-            class="tag"
-            :class="{ 'tag-accent': tag.accent }"
-          >
-            {{ tag.value }}
-          </div>
-        </div>
-        <div class="block-benefits">
-          <div v-for="benefit in allLessons.benefits" :key="benefit" class="benefit">
-            {{ benefit }}
-          </div>
-        </div>
-        <div class="block-price">
-          <div class="value">{{ allLessons.price.value }}</div>
-          <div class="subtitle">{{ allLessons.price.subtitle }}</div>
-        </div>
-        <div class="block-button">
-          <button class="btn">записаться</button>
-        </div>
-      </div>
+      <PriceBlock
+        class="all-lessons"
+        :title="allLessons.title"
+        :benefits="allLessons.benefits"
+        :price="allLessons.price"
+        :tags="allLessons.tags"
+        background-color="var(--basic-blue)"
+        color="white"
+        border-color="var(--basic-blue)"
+        box-shadow="10px 10px 0 0 var(--dark-blue)"
+      />
 
-      <div class="price-block">
-        <div class="block-tags">
-          <div
-            v-for="tag in allLessons.tags"
-            :key="tag.value"
-            class="tag"
-            :class="{ 'tag-accent': tag.accent }"
-          >
-            {{ tag.value }}
-          </div>
-        </div>
-        <div class="block-benefits">
-          <div v-for="benefit in oneLesson.benefits" :key="benefit" class="benefit">
-            {{ benefit }}
-          </div>
-        </div>
-        <div class="block-price">
-          <div class="value">{{ oneLesson.price.value }}</div>
-          <div class="subtitle">{{ oneLesson.price.subtitle }}</div>
-        </div>
-        <div class="block-button">
-          <button class="btn">записаться</button>
-        </div>
-      </div>
+      <PriceBlock
+        class="one-lesson"
+        :title="oneLesson.title"
+        :benefits="oneLesson.benefits"
+        :price="oneLesson.price"
+        :tags="oneLesson.tags"
+        background-color="white"
+        color="black"
+        border-color="black"
+        box-shadow="10px 10px 0 0 black"
+      />
     </div>
   </BlockLayout>
 </template>
 
 <script setup>
 import BlockLayout from '@/components/Layouts/BlockLayout.vue'
+import PriceBlock from '@/components/PriceBlock.vue'
 
 const allLessons = {
   title: 'Весь курс',
@@ -111,14 +86,5 @@ const oneLesson = {
   display: flex;
   justify-content: space-around;
   gap: 32px;
-}
-
-.price-block {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  padding: 32px 42px;
-  border-radius: 60px;
 }
 </style>

@@ -38,7 +38,8 @@ defineProps({
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  gap: 20px;
+  padding: 20px 40px;
   border-radius: 18px;
   color: white;
 }
@@ -77,7 +78,7 @@ defineProps({
 
 .card-img {
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 20px;
 }
 </style>

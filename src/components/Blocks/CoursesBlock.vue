@@ -1,5 +1,5 @@
 <template>
-  <BlockLayout>
+  <BlockLayout id="courses-block">
     <template #title>Курсы</template>
     <template #description
       >Онлайн-занятия по программированию и дизайну для детей, школьников и подростков

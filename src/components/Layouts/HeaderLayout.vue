@@ -4,8 +4,8 @@
 
     <nav>
       <a href="">О нас</a>
-      <a href="">Курсы</a>
-      <a href="">Цены</a>
+      <a @click="scrollTo('courses-block')">Курсы</a>
+      <a @click="scrollTo('prices-block')">Цены</a>
       <a href="">Преподаватели</a>
     </nav>
 
@@ -16,7 +16,14 @@
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+function scrollTo(id) {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+</script>
 
 <style scoped>
 header {
