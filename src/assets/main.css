@@ -23,6 +23,7 @@ body.modal-open {
   border-top: none;
   color: white;
   font-weight: bolder;
+  transition: 0.3s;
 }
 
 .btn-blue:hover {

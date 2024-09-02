@@ -1,7 +1,7 @@
 <template>
   <div class="price-block" :style="blockStyle">
     <div class="block-tags">
-      <div v-for="tag in tags" :key="tag.value" class="tag" :class="{ 'tag-accent': tag.accent }">
+      <div v-for="tag in tags" :key="tag.value" :class="['tag', { 'tag-accent': tag.accent }]">
         {{ tag.value }}
       </div>
     </div>
@@ -15,7 +15,7 @@
     </div>
     <hr />
     <div class="block-price">
-      <div class="value">{{ formatPrice(price.value) }} ₽</div>
+      <div class="value">{{ formattedPrice }} ₽</div>
       <div class="subtitle">{{ price.subtitle }}</div>
     </div>
     <div class="block-button">
@@ -45,9 +45,9 @@ const blockStyle = computed(() => ({
   boxShadow: props.boxShadow
 }))
 
-function formatPrice(price) {
-  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
-}
+const formattedPrice = computed(() => {
+  return props.price.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+})
 </script>
 
 <style scoped>
@@ -55,9 +55,7 @@ function formatPrice(price) {
   display: flex;
   flex-direction: column;
   gap: 24px;
-
   width: 480px;
-
   padding: 32px 42px;
   border-radius: 60px;
   border: 1px solid;
@@ -72,11 +70,9 @@ function formatPrice(price) {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 8px 24px;
   border-radius: 50px;
   border: 2px solid;
-
   font-size: 18px;
   font-weight: bold;
 }
@@ -96,6 +92,8 @@ function formatPrice(price) {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  margin: 24px 0;
 }
 
 .block-benefits .benefit {
@@ -111,7 +109,6 @@ function formatPrice(price) {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-
   width: 15px;
   height: 15px;
 }
@@ -147,14 +144,16 @@ function formatPrice(price) {
 
 .button {
   width: 75%;
-
   background-color: #ff5319;
   color: white;
-
   border-radius: 20px;
   padding: 16px;
-
   font-size: 32px;
   font-weight: bold;
+  transition: 0.2s;
+}
+
+.button:hover {
+  scale: 1.1;
 }
 </style>

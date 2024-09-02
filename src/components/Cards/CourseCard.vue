@@ -42,6 +42,7 @@ defineProps({
   padding: 20px 40px;
   border-radius: 18px;
   color: white;
+  transition: 0.2s;
 }
 
 .card:hover {
