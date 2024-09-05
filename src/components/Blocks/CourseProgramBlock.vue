@@ -7,11 +7,21 @@
         <span>{{ item.section }}</span>
       </div>
     </div>
+
+    <div class="list">
+      <div v-for="(item, index) in program" :key="index" class="item">
+        <Dropdown title="Click me">
+          <p>www</p>
+        </Dropdown>
+      </div>
+    </div>
   </BlockLayout>
 </template>
 
 <script setup lang="ts">
 import BlockLayout from '@/components/Layouts/BlockLayout.vue'
+
+import DropDown from '@/components/DropDown.vue'
 
 defineProps({
   program: Array

@@ -17,10 +17,14 @@
 </template>
 
 <script setup>
+import router from '@/router'
+
 function scrollTo(id) {
   const element = document.getElementById(id)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' })
+  } else {
+    router.push({ name: 'home' })
   }
 }
 </script>
