@@ -3,16 +3,12 @@
     <template #title>Программа курса</template>
 
     <div class="list">
-      <div v-for="(item, index) in program" :key="index" class="item">
-        <span>{{ item.section }}</span>
-      </div>
-    </div>
-
-    <div class="list">
-      <div v-for="(item, index) in program" :key="index" class="item">
-        <Dropdown title="Click me">
-          <p>www</p>
-        </Dropdown>
+      <div v-for="(item, index) in program" :key="index">
+        <DropDown :title="item.section">
+          <div v-for="(sub, index) in item.subsections" :key="index" class="sub-item">
+            {{ sub }}
+          </div>
+        </DropDown>
       </div>
     </div>
   </BlockLayout>
@@ -33,13 +29,9 @@ defineProps({
   width: fit-content;
 }
 
-.item {
-  display: flex;
-  gap: 16px;
-  align-items: center;
+.sub-item {
+  font-size: 18px;
 
-  font-size: 32px;
-  padding: 24px 0;
-  border-top: 1px solid var(--dark-gray);
+  margin: 12px 0 0 20px;
 }
 </style>

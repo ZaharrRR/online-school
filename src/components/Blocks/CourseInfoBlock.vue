@@ -36,16 +36,32 @@
           </div>
         </div>
 
-        <button class="btn btn-blue">Записаться на курс</button>
+        <button class="btn btn-blue" @click="openContactModal">Записаться на курс</button>
       </div>
     </div>
+
+    <ContactModal :is-open="isOpenContactModal" :course="course" @close-modal="closeContactModal" />
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
+import ContactModal from '@/components/Modals/ContactModal.vue'
+
 defineProps({
   course: Object
 })
+
+const isOpenContactModal = ref(false)
+
+const openContactModal = () => {
+  isOpenContactModal.value = true
+}
+
+const closeContactModal = () => {
+  isOpenContactModal.value = false
+}
 </script>
 
 <style scoped>

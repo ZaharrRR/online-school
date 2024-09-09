@@ -1,8 +1,8 @@
 <template>
   <div class="dropdown">
-    <div class="dropdown-header" @click="toggleDropdown">
-      <span class="dropdown-text">{{ title }}</span>
-      <span class="dropdown-icon">{{ isOpen ? '-' : '+' }}</span>
+    <div class="dropdown-header" @click="toggleDropdown()">
+      <span>{{ title }}</span>
+      <img src="/icons/pluss.svg" alt="pluss" />
     </div>
     <div v-if="isOpen" class="dropdown-content">
       <slot></slot>
@@ -29,27 +29,20 @@ function toggleDropdown() {
 
 <style scoped>
 .dropdown {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   overflow: hidden;
 }
 
 .dropdown-header {
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
   align-items: center;
-  padding: 10px;
-  background-color: #f0f0f0;
+  justify-content: space-between;
+
+  font-size: 32px;
+  padding: 24px 0;
+  border-top: 1px solid var(--dark-gray);
+
   cursor: pointer;
-}
-
-.dropdown-text {
-  font-size: 16px;
-}
-
-.dropdown-icon {
-  font-size: 20px;
 }
 
 .dropdown-content {

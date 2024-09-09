@@ -8,7 +8,11 @@
       </p>
     </div>
 
-    <ContactForm />
+    <div v-if="course" class="modal-info">Выбранный курс: {{ course.name }}</div>
+
+    <div v-if="price" class="modal-info">Выбранная цена: {{ price }}</div>
+
+    <ContactForm :course="course.name" :price="price" />
   </ModalLayout>
 </template>
 
@@ -17,7 +21,9 @@ import ModalLayout from '@/components/Layouts/ModalLayout.vue'
 import ContactForm from '@/components/Forms/ContactForm.vue'
 
 defineProps({
-  isOpen: Boolean
+  isOpen: Boolean,
+  course: Object,
+  price: String
 })
 
 defineEmits(['close-modal'])
@@ -38,5 +44,12 @@ defineEmits(['close-modal'])
 .modal-top p {
   font-weight: bold;
   font-size: 20px;
+}
+
+.modal-info {
+  font-weight: 600;
+  font-size: 20px;
+
+  margin: 16px 0;
 }
 </style>

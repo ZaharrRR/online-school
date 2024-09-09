@@ -15,7 +15,7 @@ defineProps({
 <style scoped>
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
   grid-auto-rows: 1fr;
   gap: 36px;
   margin-top: 36px;

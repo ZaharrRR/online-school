@@ -19,7 +19,7 @@
       <div class="subtitle">{{ price.subtitle }}</div>
     </div>
     <div class="block-button">
-      <button class="button">записаться</button>
+      <button class="button" @click="$emit('submit', title)">записаться</button>
     </div>
   </div>
 </template>
@@ -37,6 +37,8 @@ const props = defineProps({
   borderColor: String,
   boxShadow: String
 })
+
+defineEmits(['submit'])
 
 const blockStyle = computed(() => ({
   backgroundColor: props.backgroundColor,

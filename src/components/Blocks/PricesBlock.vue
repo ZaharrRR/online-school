@@ -13,6 +13,7 @@
         color="white"
         border-color="var(--basic-blue)"
         box-shadow="10px 10px 0 0 var(--dark-blue)"
+        @submit="submitPrice"
       />
 
       <PriceBlock
@@ -25,14 +26,29 @@
         color="black"
         border-color="black"
         box-shadow="10px 10px 0 0 black"
+        @submit="submitPrice"
       />
     </div>
+
+    <ContactModal
+      :is-open="isOpenContactModal"
+      :price="currentPrice"
+      @close-modal="closeContactModal"
+    />
   </BlockLayout>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
 import BlockLayout from '@/components/Layouts/BlockLayout.vue'
 import PriceBlock from '@/components/PriceBlock.vue'
+
+import ContactModal from '@/components/Modals/ContactModal.vue'
+
+const isOpenContactModal = ref(false)
+
+const currentPrice = ref('')
 
 const allLessons = {
   title: 'Весь курс',
@@ -78,6 +94,20 @@ const oneLesson = {
       accent: false
     }
   ]
+}
+
+const submitPrice = (title) => {
+  console.log(title)
+  currentPrice.value = title
+  openContactModal()
+}
+
+const openContactModal = () => {
+  isOpenContactModal.value = true
+}
+
+const closeContactModal = () => {
+  isOpenContactModal.value = false
 }
 </script>
 

@@ -3,21 +3,37 @@
     <a class="logo" href="/">ПРОГА</a>
 
     <nav>
-      <a href="">О нас</a>
+      <!-- <a href="">О нас</a> -->
       <a @click="scrollTo('courses-block')">Курсы</a>
       <a @click="scrollTo('prices-block')">Цены</a>
-      <a href="">Преподаватели</a>
+      <!-- <a href="">Преподаватели</a> -->
     </nav>
 
     <div class="contacts">
       <span>+7 (951) 175-1764</span>
-      <button class="btn">Запись</button>
+      <button class="btn" @click="openContactModal">Запись</button>
     </div>
+
+    <ContactModal :is-open="isOpenContactModal" @close-modal="closeContactModal" />
   </header>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
 import router from '@/router'
+
+import ContactModal from '@/components/Modals/ContactModal.vue'
+
+const isOpenContactModal = ref(false)
+
+const openContactModal = () => {
+  isOpenContactModal.value = true
+}
+
+const closeContactModal = () => {
+  isOpenContactModal.value = false
+}
 
 function scrollTo(id) {
   const element = document.getElementById(id)
@@ -47,6 +63,14 @@ nav {
   display: flex;
   align-items: center;
   gap: 36px;
+}
+
+nav a {
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 .contacts {

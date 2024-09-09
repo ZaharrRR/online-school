@@ -91,6 +91,8 @@
       },
       "projects": [
         {
+          "studentName": "Олег",
+          "studentImg": "/students/oleg.png",
           "title": "Анимация котёнка",
           "img": "/students/kitten_animation.png"
         },
