@@ -1,6 +1,8 @@
 <template>
   <header>
-    <a class="logo" href="/">ПРОГА</a>
+    <a class="logo" href="/">
+      <img src="/logo.svg" alt="logo" />
+    </a>
 
     <nav>
       <!-- <a href="">О нас</a> -->
@@ -52,11 +54,6 @@ header {
   justify-content: space-between;
 
   padding: 40px 50px;
-}
-
-.logo {
-  font-size: 40px;
-  font-weight: bold;
 }
 
 nav {
