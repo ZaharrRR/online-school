@@ -19,7 +19,7 @@
       <div class="subtitle">{{ price.subtitle }}</div>
     </div>
     <div class="block-button">
-      <button class="button" @click="$emit('submit', title)">записаться</button>
+      <button class="button" @click="$emit('submit', props.title)">записаться</button>
     </div>
   </div>
 </template>

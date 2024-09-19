@@ -26,12 +26,22 @@
       },
       "projects": [
         {
-          "title": "Рисование Turtle",
-          "img": "/students/turtle_drawing.png"
+          "title": "Космический десант",
+          "img": "/projects/python-code1.png",
+          "studentName": "Олег",
+          "studentImg": "/students/python-student1.png"
         },
         {
-          "title": "Игра на Pygame",
-          "img": "/students/pygame_game.png"
+          "title": "Луна над лесом",
+          "img": "/projects/python-code2.png",
+          "studentName": "Ксения",
+          "studentImg": "/students/python-student2.png"
+        },
+        {
+          "title": "Телеграм-бот Бункер",
+          "img": "/projects/python-code3.png",
+          "studentName": "Станислав",
+          "studentImg": "/students/python-student3.png"
         }
       ],
       "program": [
@@ -91,14 +101,22 @@
       },
       "projects": [
         {
-          "studentName": "Олег",
-          "studentImg": "/students/oleg.png",
-          "title": "Анимация котёнка",
-          "img": "/students/kitten_animation.png"
+          "title": "Звездные войны",
+          "img": "/projects/scratch-code1.png",
+          "studentName": "Алексей",
+          "studentImg": "/students/scratch-student1.png"
         },
         {
-          "title": "Простая игра",
-          "img": "/students/simple_game.png"
+          "title": "Дом с призраками",
+          "img": "/projects/scratch-code2.png",
+          "studentName": "Иван",
+          "studentImg": "/students/scratch-student2.png"
+        },
+        {
+          "title": "Огонь и вода",
+          "img": "/projects/scratch-code3.png",
+          "studentName": "Максим",
+          "studentImg": "/students/scratch-student3.png"
         }
       ],
       "program": [
@@ -150,12 +168,16 @@
       },
       "projects": [
         {
-          "title": "Создание документа",
-          "img": "/students/document_creation.png"
+          "title": "Презентация для школьного проекта",
+          "img": "/projects/pc-project1.png",
+          "studentName": "Валерия",
+          "studentImg": "/students/pc-student1.png"
         },
         {
-          "title": "Презентация",
-          "img": "/students/presentation.png"
+          "title": "Разрабокта документа",
+          "img": "/projects/pc-project2.png",
+          "studentName": "Эмиль",
+          "studentImg": "/students/pc-student2.png"
         }
       ],
       "program": [
@@ -207,12 +229,16 @@
       },
       "projects": [
         {
-          "title": "Создание мода",
-          "img": "/students/minecraft_mod.png"
+          "title": "Собственный лаунчер",
+          "img": "/projects/minecraft-project1.png",
+          "studentName": "Василий",
+          "studentImg": "/students/minecraft-student1.png"
         },
         {
-          "title": "Автоматизация в игре",
-          "img": "/students/automation.png"
+          "title": "Игра Лабиринт в Python",
+          "img": "/projects/minecraft-project2.png",
+          "studentName": "Лаврентий",
+          "studentImg": "/students/minecraft-student2.png"
         }
       ],
       "program": [
@@ -264,12 +290,16 @@
       },
       "projects": [
         {
-          "title": "Создание игры в Roblox",
-          "img": "/students/roblox_game.png"
+          "title": "Игра Super Roblox Boy",
+          "img": "/projects/roblox-code1.png",
+          "studentName": "Богдан",
+          "studentImg": "/students/roblox-student1.png"
         },
         {
           "title": "Логика и скрипты",
-          "img": "/students/roblox_logic.png"
+          "img": "/projects/roblox-code2.png",
+          "studentName": "Василиса",
+          "studentImg": "/students/roblox-student2.png"
         }
       ],
       "program": [
@@ -321,12 +351,16 @@
       },
       "projects": [
         {
-          "title": "Личный сайт",
-          "img": "/students/personal_website.png"
+          "title": "Сайт для школьного проекта",
+          "img": "/projects/site-code1.png",
+          "studentName": "Виктор",
+          "studentImg": "/students/site-student1.png"
         },
         {
-          "title": "Веб-приложение",
-          "img": "/students/web_app.png"
+          "title": "Учебный сайт",
+          "img": "/projects/site-code2.png",
+          "studentName": "Дмитрий",
+          "studentImg": "/students/site-student2.png"
         }
       ],
       "program": [

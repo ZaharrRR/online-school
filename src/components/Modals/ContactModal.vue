@@ -12,7 +12,7 @@
 
     <div v-if="price" class="modal-info">Выбранная цена: {{ price }}</div>
 
-    <ContactForm :course="course.name" :price="price" />
+    <ContactForm :course="course ? course.name : ''" :price="price" />
   </ModalLayout>
 </template>
 
@@ -22,8 +22,14 @@ import ContactForm from '@/components/Forms/ContactForm.vue'
 
 defineProps({
   isOpen: Boolean,
-  course: Object,
-  price: String
+  course: {
+    type: Object,
+    required: false
+  },
+  price: {
+    type: String,
+    required: false
+  }
 })
 
 defineEmits(['close-modal'])

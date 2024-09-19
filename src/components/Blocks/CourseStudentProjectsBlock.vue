@@ -3,38 +3,99 @@
     <template #title>Проекты учеников</template>
 
     <div class="projects">
-      <div v-for="(project, index) in projects" :key="index" class="project">
-        <img :src="project.img" alt="project" />
-        <p>{{ project.title }}</p>
+      <button @click="prevProject">
+        <img src="/icons/slide-button-left.svg" alt="slide-button" />
+      </button>
+
+      <div v-if="projects && projects.length > 0" class="project">
+        <div class="project-student">
+          <img :src="projects[currentIndex].studentImg" alt="student" />
+          <p>{{ projects[currentIndex].studentName }}</p>
+        </div>
+
+        <div class="project-card">
+          <img :src="projects[currentIndex].img" alt="project" />
+          <p>{{ projects[currentIndex].title }}</p>
+        </div>
       </div>
+
+      <button @click="nextProject">
+        <img src="/icons/slide-button-right.svg" alt="slide-button" />
+      </button>
     </div>
   </BlockLayout>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import BlockLayout from '@/components/Layouts/BlockLayout.vue'
 
-defineProps({
-  projects: Object
+const props = defineProps({
+  projects: {
+    type: Array,
+    required: true
+  }
 })
+
+const currentIndex = ref(0)
+
+const nextProject = () => {
+  if (currentIndex.value < props.projects.length - 1) {
+    currentIndex.value++
+  }
+}
+
+const prevProject = () => {
+  if (currentIndex.value > 0) {
+    currentIndex.value--
+  }
+}
 </script>
 
 <style scoped>
 .projects {
   display: flex;
   gap: 24px;
-  width: fit-content;
+  width: 100%;
   margin: 24px auto;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .project {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 24px;
 }
 
-.project p {
-  width: 50%;
-  text-align: center;
+.project img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--dark-gray);
+
+  height: 300px;
+}
+
+.project-student {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  width: 33%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  width: 66%;
+}
+
+.btn {
+  padding: 8px 16px;
+  cursor: pointer;
 }
 </style>
