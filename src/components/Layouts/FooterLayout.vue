@@ -7,21 +7,21 @@
 
     <div class="contacts">
       <div class="contacts-head">
-        <p>+7 (951) 175-1764</p>
+        <p>+7 (951) 175-1753</p>
         <a href="/">info@proga.com</a>
       </div>
 
       <div class="contacts-social">
-        <a href="">
+        <a href="https://tiktok.com/@progaschool">
           <img src="/social/TT.svg" alt="" />
         </a>
-        <a href="">
+        <a href="https://vk.com/proga_school">
           <img src="/social/VK.svg" alt="" />
         </a>
-        <a href="">
+        <a href="https://www.youtube.com/@proga-school">
           <img src="/social/YT.svg" alt="" />
         </a>
-        <a href="">
+        <a href="https://t.me/proga_school">
           <img src="/social/telegram.svg" alt="" />
         </a>
       </div>

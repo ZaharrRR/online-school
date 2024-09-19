@@ -10,7 +10,7 @@
     </nav>
 
     <div class="contacts">
-      <span>+7 (951) 175-1764</span>
+      <span>+7 (951) 175-1753</span>
       <button class="btn" @click="openContactModal">Запись</button>
     </div>
 
