@@ -3,7 +3,7 @@ import HomeView from '@/views/HomeView.vue'
 import CourseView from '@/views/CourseView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -15,7 +15,11 @@ const router = createRouter({
       name: 'course',
       component: CourseView
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // Всегда прокручиваем страницу вверх при переходе на новый маршрут
+    return { top: 0 }
+  }
 })
 
 export default router

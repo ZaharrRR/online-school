@@ -34,7 +34,6 @@ const closeContactModal = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 36px;
   margin-top: 100px;
 }
 

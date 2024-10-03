@@ -53,7 +53,23 @@ header {
   align-items: center;
   justify-content: space-between;
 
+  margin: 0 auto;
+
   padding: 40px 50px;
+  width: var(--screen-lg);
+}
+
+@media (max-width: 1366px) {
+  header {
+    width: var(--screen-md);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+    width: var(--screen-sm);
+  }
 }
 
 nav {

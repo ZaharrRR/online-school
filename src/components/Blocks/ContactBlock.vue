@@ -1,11 +1,13 @@
 <template>
   <section class="contact">
-    <div class="contact-text">
-      <h2>Поможем с выбором!</h2>
-      <p>Оставьте ваш номер. Мы позвоним, чтобы ответить на ваши вопросы!</p>
-    </div>
+    <div class="contact-content">
+      <div class="contact-text">
+        <h2>Поможем с выбором!</h2>
+        <p>Оставьте ваш номер. Мы позвоним, чтобы ответить на ваши вопросы!</p>
+      </div>
 
-    <ContactForm class="contact-form" />
+      <ContactForm class="contact-form" />
+    </div>
   </section>
 </template>
 
@@ -15,13 +17,32 @@ import ContactForm from '@/components/Forms/ContactForm.vue'
 
 <style scoped>
 .contact {
+  background-color: var(--basic-blue);
+  color: white;
+}
+
+.contact-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 75px 120px;
-  background-color: var(--basic-blue);
-  color: white;
+
+  width: var(--screen-lg);
+  padding: 75px 50px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1366px) {
+  .contact {
+    width: var(--screen-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 0 20px;
+    width: var(--screen-sm);
+  }
 }
 
 .contact-text {
