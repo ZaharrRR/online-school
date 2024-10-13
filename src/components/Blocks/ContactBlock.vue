@@ -32,19 +32,6 @@ import ContactForm from '@/components/Forms/ContactForm.vue'
   margin: 0 auto;
 }
 
-@media (max-width: 1366px) {
-  .contact {
-    width: var(--screen-md);
-  }
-}
-
-@media (max-width: 768px) {
-  .contact {
-    padding: 0 20px;
-    width: var(--screen-sm);
-  }
-}
-
 .contact-text {
   width: 40%;
 }
@@ -62,5 +49,45 @@ import ContactForm from '@/components/Forms/ContactForm.vue'
 .contact-form {
   width: 40%;
   max-width: 400px;
+}
+
+@media (max-width: 1366px) {
+  .contact {
+    width: 768px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    width: 100%;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    width: 100%;
+    padding: 40px 26px;
+  }
+
+  .contact-text {
+    width: 100%;
+  }
+
+  .contact-text h2 {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .contact-text p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 </style>

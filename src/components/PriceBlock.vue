@@ -158,4 +158,63 @@ const formattedPrice = computed(() => {
 .button:hover {
   scale: 1.1;
 }
+
+@media (max-width: 480px) {
+  .price-block {
+    gap: 16px;
+    width: 100%;
+    padding: 30px 28px;
+    border-radius: 40px;
+  }
+
+  .tag {
+    padding: 6px 16px;
+    border: 1px solid;
+    font-size: 12px;
+  }
+
+  .tag-accent {
+    background-color: #ff5319;
+    border-color: #ff5319;
+  }
+
+  .block-title h2 {
+    font-size: 24px;
+  }
+
+  .block-benefits {
+    gap: 16px;
+    margin: 12px 0;
+  }
+
+  .block-benefits .benefit {
+    font-size: 13px;
+    font-weight: 700;
+    padding-left: 32px;
+  }
+
+  .benefit::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .block-price .value {
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  .block-price .subtitle {
+    font-size: 11px;
+    font-weight: 400;
+  }
+
+  .button {
+    width: 80%;
+    border-radius: 50px;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+}
 </style>

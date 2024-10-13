@@ -59,19 +59,6 @@ header {
   width: var(--screen-lg);
 }
 
-@media (max-width: 1366px) {
-  header {
-    width: var(--screen-md);
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 0 20px;
-    width: var(--screen-sm);
-  }
-}
-
 nav {
   display: flex;
   align-items: center;
@@ -96,5 +83,51 @@ nav a:hover {
   border-color: var(--basic-blue);
   padding: 8px 36px;
   font-weight: 500;
+}
+
+@media (max-width: 1366px) {
+  header {
+    width: var(--screen-md);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+    width: var(--screen-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px 27px;
+    width: 100%;
+  }
+
+  nav {
+    display: none;
+    align-items: center;
+    gap: 36px;
+  }
+
+  nav a {
+    cursor: pointer;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .contacts {
+    display: none;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .contacts button {
+    border-color: var(--basic-blue);
+    padding: 8px 36px;
+    font-weight: 500;
+  }
 }
 </style>

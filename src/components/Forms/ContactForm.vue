@@ -89,4 +89,21 @@ form button {
   margin-top: 12px;
   padding: 16px 32px;
 }
+
+@media (max-width: 480px) {
+  form {
+    padding: 30px 14px;
+  }
+
+  form input {
+    padding: 18px 22px;
+  }
+
+  form button {
+    align-self: center;
+    width: 70%;
+    margin-top: 12px;
+    padding: 12px 28px;
+  }
+}
 </style>

@@ -49,4 +49,10 @@ function toggleDropdown() {
   padding: 10px;
   border-top: 1px solid #ccc;
 }
+
+@media (max-width: 480px) {
+  .dropdown-header {
+    font-size: 20px;
+  }
+}
 </style>

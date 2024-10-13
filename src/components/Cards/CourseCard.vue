@@ -82,4 +82,41 @@ defineProps({
   right: 40px;
   top: 20px;
 }
+
+@media (max-width: 480px) {
+  .card {
+    gap: 16px;
+    padding: 16px 18px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+    width: 60%;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .card-btns {
+    margin-top: 8px;
+  }
+
+  .card-btns button {
+    font-size: 10px;
+  }
+
+  .card-age {
+    border: 2px solid;
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+
+  .card-img {
+    width: 60px;
+    right: 25px;
+    top: 12px;
+  }
+}
 </style>

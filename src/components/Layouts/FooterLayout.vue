@@ -71,4 +71,44 @@ a {
   align-items: center;
   gap: 10px;
 }
+
+@media (max-width: 480px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--footer-black);
+    color: white;
+    padding: 20px 27px;
+  }
+
+  a {
+    color: white;
+  }
+
+  .logo-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 300;
+  }
+
+  .logo-info a {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-weight: 300;
+  }
+
+  .contacts-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
 </style>

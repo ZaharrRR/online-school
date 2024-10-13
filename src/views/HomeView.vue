@@ -22,4 +22,10 @@ main {
   flex-direction: column;
   gap: 64px;
 }
+
+@media (max-width: 480px) {
+  main {
+    gap: 40px;
+  }
+}
 </style>

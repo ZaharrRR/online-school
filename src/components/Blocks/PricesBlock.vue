@@ -117,4 +117,10 @@ const closeContactModal = () => {
   justify-content: space-around;
   gap: 32px;
 }
+
+@media (max-width: 480px) {
+  .prices {
+    flex-direction: column;
+  }
+}
 </style>

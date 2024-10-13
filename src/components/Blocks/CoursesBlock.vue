@@ -1,20 +1,19 @@
 <template>
   <BlockLayout id="courses-block">
     <template #title>Курсы</template>
-    <template #description
-      >Онлайн-занятия по программированию и дизайну для детей, школьников и подростков
+    <template #description v-if="windowWidth > 480">
+      Онлайн-занятия по программированию и дизайну для детей, школьников и подростков
     </template>
 
-    <CoursesAges v-model="selectedAge" :ages="ages" />
+    <CoursesAges v-if="windowWidth > 480" v-model="selectedAge" :ages="ages" />
     <CoursesList :courses="filterdCourses" />
   </BlockLayout>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 import BlockLayout from '@/components/Layouts/BlockLayout.vue'
-
 import CoursesAges from './CoursesAges.vue'
 import CoursesList from '../Lists/CoursesList.vue'
 
@@ -44,10 +43,21 @@ const ages = [
 ]
 
 const selectedAge = ref(ages[0])
+const windowWidth = ref(window.innerWidth)
 
 const filterdCourses = computed(() => {
   return courses.value.filter((el) => el.ages.some((age) => selectedAge.value.code.includes(age)))
 })
-</script>
 
-<style scoped></style>
+const updateWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+
+onMounted(() => {
+  window.addEventListener('resize', updateWindowWidth)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateWindowWidth)
+})
+</script>

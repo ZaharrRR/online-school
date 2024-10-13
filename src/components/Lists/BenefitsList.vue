@@ -24,4 +24,11 @@ defineProps({
   gap: 64px;
   margin-bottom: 100px;
 }
+
+@media (max-width: 480px) {
+  .list {
+    display: flex;
+    gap: 15px;
+  }
+}
 </style>
