@@ -91,24 +91,33 @@ a {
     flex-direction: column;
     justify-content: space-between;
     font-weight: 300;
+    font-size: 12px;
   }
 
   .logo-info a {
-    font-size: 40px;
+    font-size: 28px;
     font-weight: bold;
+  }
+
+  .logo-info img {
+    width: 150px;
   }
 
   .contacts {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 24px;
     font-weight: 300;
+  }
+
+  .contacts-head {
+    font-size: 12px;
   }
 
   .contacts-social {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
   }
 }
 </style>

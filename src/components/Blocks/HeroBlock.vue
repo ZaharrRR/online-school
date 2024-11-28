@@ -84,7 +84,6 @@ onUnmounted(() => {
     align-items: center;
     justify-content: center;
     margin-top: 24px;
-    width: 100%;
   }
 
   .hero-info {

@@ -102,10 +102,11 @@ nav a:hover {
   header {
     padding: 20px 27px;
     width: 100%;
+    flex-direction: column;
+    gap: 12px;
   }
 
   nav {
-    display: none;
     align-items: center;
     gap: 36px;
   }
@@ -119,7 +120,6 @@ nav a:hover {
   }
 
   .contacts {
-    display: none;
     align-items: center;
     gap: 24px;
   }

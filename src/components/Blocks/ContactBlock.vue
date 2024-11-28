@@ -65,10 +65,10 @@ import ContactForm from '@/components/Forms/ContactForm.vue'
   .contact-content {
     flex-direction: column;
     justify-content: center;
-    gap: 50px;
+    gap: 24px;
 
     width: 100%;
-    padding: 40px 26px;
+    padding: 20px 12px;
   }
 
   .contact-text {
