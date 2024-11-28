@@ -70,4 +70,19 @@ defineProps({
 
   padding: 4px 8px;
 }
+
+@media (max-width: 480px) {
+  .about {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .about-goal {
+    width: 100%;
+  }
+
+  .about-topics {
+    width: 100%;
+  }
+}
 </style>

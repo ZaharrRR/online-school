@@ -4,7 +4,7 @@
 
     <div class="projects">
       <button @click="prevProject">
-        <img src="/icons/slide-button-left.svg" alt="slide-button" />
+        <img src="/icons/slide-button-left.svg" alt="slide-button" class="arrow" />
       </button>
 
       <div v-if="projects && projects.length > 0" class="project">
@@ -20,7 +20,7 @@
       </div>
 
       <button @click="nextProject">
-        <img src="/icons/slide-button-right.svg" alt="slide-button" />
+        <img src="/icons/slide-button-right.svg" alt="slide-button" class="arrow" />
       </button>
     </div>
   </BlockLayout>
@@ -97,5 +97,36 @@ const prevProject = () => {
 .btn {
   padding: 8px 16px;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .projects {
+    margin: 4px auto;
+    gap: 12px;
+  }
+
+  .project {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .project img {
+    width: 100%;
+    height: fit-content;
+    border-radius: 8px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-student {
+    width: 100%;
+  }
+
+  .project-card {
+    width: 100%;
+  }
 }
 </style>

@@ -45,9 +45,17 @@ const cards = [
   width: fit-content;
   margin: 0 auto;
   gap: 36px;
+  overflow-x: scroll;
 }
 
 .item {
   width: 220px;
+}
+
+@media (max-width: 480px) {
+  .going-block {
+    width: 100%;
+    overflow-x: auto;
+  }
 }
 </style>

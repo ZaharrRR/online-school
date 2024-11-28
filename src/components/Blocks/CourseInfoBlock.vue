@@ -142,4 +142,30 @@ const closeContactModal = () => {
   padding: 16px 24px;
   place-self: center;
 }
+
+@media (max-width: 480px) {
+  .block {
+    padding: 30px 40px;
+  }
+
+  .info {
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .left {
+    width: 100%;
+    gap: 12px;
+    padding: 12px;
+    border: none;
+  }
+
+  .right {
+    width: 100%;
+    gap: 12px;
+    padding: 12px;
+  }
+}
 </style>

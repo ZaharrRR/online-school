@@ -2,6 +2,9 @@
   <ModalLayout :is-open="isOpen" @close-modal="$emit('close-modal')">
     <div class="modal-top">
       <h2>Поможем с выбором!</h2>
+
+      <button @click="$emit('close-modal')" class="btn btn-blue close">X</button>
+
       <p>
         Оставьте свой номер: мы позвоним, <br />
         чтобы ответить на все ваши вопросы.
@@ -42,6 +45,12 @@ defineEmits(['close-modal'])
   margin-bottom: 50px;
 }
 
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
 .modal-top h2 {
   font-weight: 800;
   font-size: 36px;
@@ -57,5 +66,23 @@ defineEmits(['close-modal'])
   font-size: 20px;
 
   margin: 16px 0;
+}
+
+@media (max-width: 480px) {
+  .modal-top {
+    margin-bottom: 20px;
+  }
+
+  .modal-top h2 {
+    font-size: 24px;
+  }
+
+  .modal-top p {
+    font-size: 14px;
+  }
+
+  .modal-info {
+    font-size: 14px;
+  }
 }
 </style>
