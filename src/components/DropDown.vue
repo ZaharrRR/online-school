@@ -22,8 +22,8 @@ defineProps({
 
 const isOpen = ref(false)
 
-function toggleDropdown() {
-  this.isOpen = !this.isOpen
+const toggleDropdown = () => {
+  isOpen.value = !isOpen.value
 }
 </script>
 
