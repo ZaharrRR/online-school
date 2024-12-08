@@ -81,8 +81,14 @@ defineProps({
     width: 100%;
   }
 
+  .about-goal p {
+    font-size: 16px;
+    margin: 12px 0;
+  }
+
   .about-topics {
     width: 100%;
+    font-size: 14px;
   }
 }
 </style>

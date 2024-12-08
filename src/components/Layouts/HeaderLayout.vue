@@ -1,10 +1,22 @@
 <template>
   <header>
-    <a class="logo" href="/">
-      <img src="/logo.svg" alt="logo" />
-    </a>
+    <div class="header-top">
+      <a class="logo" href="/">
+        <img src="/logo.svg" alt="logo" />
+      </a>
 
-    <nav>
+      <button @click="tuggleBurger()" class="burger-button">
+        <img src="/icons/burger-menu.svg" alt="" />
+      </button>
+    </div>
+
+    <nav :class="['header-burger', isBurgerMenuOpen == true ? 'visible' : '']">
+      <a @click="scrollTo('courses-block')" class="burger-item">Курсы</a>
+      <a @click="scrollTo('prices-block')" class="burger-item">Цены</a>
+      <a class="burger-item">+7 (951) 175-1753</a>
+    </nav>
+
+    <nav class="header-nav">
       <!-- <a href="">О нас</a> -->
       <a @click="scrollTo('courses-block')">Курсы</a>
       <a @click="scrollTo('prices-block')">Цены</a>
@@ -28,6 +40,12 @@ import router from '@/router'
 import ContactModal from '@/components/Modals/ContactModal.vue'
 
 const isOpenContactModal = ref(false)
+
+const isBurgerMenuOpen = ref(false)
+
+const tuggleBurger = () => {
+  isBurgerMenuOpen.value = !isBurgerMenuOpen.value
+}
 
 const openContactModal = () => {
   isOpenContactModal.value = true
@@ -59,17 +77,21 @@ header {
   width: var(--screen-lg);
 }
 
-nav {
+.burger-button {
+  display: none;
+}
+
+.header-nav {
   display: flex;
   align-items: center;
   gap: 36px;
 }
 
-nav a {
+.header-nav a {
   cursor: pointer;
 }
 
-nav a:hover {
+.header-nav a:hover {
   text-decoration: underline;
 }
 
@@ -83,6 +105,10 @@ nav a:hover {
   border-color: var(--basic-blue);
   padding: 8px 36px;
   font-weight: 500;
+}
+
+.header-burger {
+  display: none;
 }
 
 @media (max-width: 1366px) {
@@ -106,22 +132,55 @@ nav a:hover {
     gap: 12px;
   }
 
-  nav {
+  .burger-button {
+    display: block;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 36px;
+    padding: 0 24px;
+    width: 100%;
   }
 
-  nav a {
-    cursor: pointer;
+  .logo img {
+    width: 150px;
   }
 
-  nav a:hover {
-    text-decoration: underline;
+  .header-burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 4px;
+
+    transition: 0.3s;
+  }
+
+  .burger-item {
+    display: none;
+    font-size: 20px;
+    padding: 20px 50px;
+    border-bottom: 1px solid var(--dark-gray);
+  }
+
+  .visible {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 195px;
+  }
+
+  .visible .burger-item {
+    display: block;
+  }
+
+  .header-nav {
+    display: none;
   }
 
   .contacts {
-    align-items: center;
-    gap: 24px;
+    display: none;
   }
 
   .contacts button {

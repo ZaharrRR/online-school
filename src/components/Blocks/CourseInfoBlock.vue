@@ -7,7 +7,7 @@
           <h1>{{ course.name }}</h1>
         </div>
 
-        <p>
+        <p class="left-desc">
           {{ course.description }}
         </p>
 
@@ -152,20 +152,48 @@ const closeContactModal = () => {
     flex-direction: column;
     max-width: 100%;
     width: 100%;
-    padding: 12px;
+    padding: 20px;
   }
 
   .left {
     width: 100%;
     gap: 12px;
-    padding: 12px;
+    padding: 12px 0;
+    padding-bottom: 24px;
     border: none;
+
+    border-bottom: 1px solid var(--dark-gray);
+  }
+
+  .left-desc {
+    font-size: 14px;
+  }
+
+  .left-tags {
+    gap: 10px;
+  }
+
+  .tag {
+    font-size: 12px;
   }
 
   .right {
     width: 100%;
     gap: 12px;
-    padding: 12px;
+    padding: 12px 0;
+    padding-top: 24px;
+  }
+
+  .right button {
+    margin-top: 32px;
+  }
+
+  .grid-item strong {
+    font-size: 18px;
+  }
+  .grid-item p {
+    font-size: 14px;
+    margin-bottom: 12px;
   }
 }
 </style>
