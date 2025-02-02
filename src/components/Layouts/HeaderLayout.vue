@@ -1,9 +1,9 @@
 <template>
   <header>
     <div class="header-top">
-      <a class="logo" href="/">
+      <RouterLink class="logo" to="/">
         <img src="/logo.svg" alt="logo" />
-      </a>
+      </RouterLink>
 
       <button @click="tuggleBurger()" class="burger-button">
         <img src="/icons/burger-menu.svg" alt="" />
@@ -38,6 +38,7 @@ import { ref } from 'vue'
 import router from '@/router'
 
 import ContactModal from '@/components/Modals/ContactModal.vue'
+import { RouterLink } from 'vue-router'
 
 const isOpenContactModal = ref(false)
 
