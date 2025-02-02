@@ -11,16 +11,18 @@
     </div>
 
     <nav :class="['header-burger', isBurgerMenuOpen == true ? 'visible' : '']">
-      <a @click="scrollTo('courses-block')" class="burger-item">Курсы</a>
-      <a @click="scrollTo('prices-block')" class="burger-item">Цены</a>
+      <RouterLink to="/courses">Курсы</RouterLink>
+      <RouterLink to="/prices">Цены</RouterLink>
+      <RouterLink to="/teachers">Преподаватели</RouterLink>
+      <RouterLink to="/about">О нас</RouterLink>
       <a class="burger-item">+7 (951) 175-1753</a>
     </nav>
 
     <nav class="header-nav">
-      <!-- <a href="">О нас</a> -->
-      <a @click="scrollTo('courses-block')">Курсы</a>
-      <a @click="scrollTo('prices-block')">Цены</a>
-      <!-- <a href="">Преподаватели</a> -->
+      <RouterLink to="/courses">Курсы</RouterLink>
+      <RouterLink to="/prices">Цены</RouterLink>
+      <RouterLink to="/teachers">Преподаватели</RouterLink>
+      <RouterLink to="/about">О нас</RouterLink>
     </nav>
 
     <div class="contacts">

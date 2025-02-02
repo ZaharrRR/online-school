@@ -41,6 +41,9 @@ footer {
   background-color: var(--footer-black);
   color: white;
   padding: 24px 50px;
+
+  /* FIX */
+  margin-top: 24px;
 }
 
 a {
